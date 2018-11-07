@@ -1,0 +1,2227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/fragment_bg"
+    tools:context="com.ruiduoyi.activity.GycsActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/blue_sl_false">
+
+        <Button
+            android:id="@+id/cancle_btn"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/cmdclose_sl" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="工艺参数"
+            android:textColor="@android:color/white"
+            android:textSize="30dp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue_sl_false"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/text_bg"
+                    android:gravity="center"
+                    android:text="文件编号" />
+
+                <TextView
+                    android:layout_width="85dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/text_bg"
+                    android:gravity="center"
+                    android:text="机台" />
+
+                <TextView
+                    android:layout_width="85dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/text_bg"
+                    android:gravity="center"
+                    android:text="版本" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/list_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/text_bg"
+                android:divider="@color/touming"></ListView>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:text="注塑参数表"
+                    android:textSize="25dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/constraint_id_wjbh"
+                        android:layout_width="60dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="文件编号:" />
+
+                    <TextView
+                        android:id="@+id/wjbh"
+                        android:layout_width="170dp"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@id/constraint_id_wjbh"
+                        android:gravity="center_vertical"
+                        android:textColor="@android:color/black" />
+                    <TextView
+                        android:id="@+id/tips"
+                        android:text=""
+                        android:layout_centerInParent="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="35dp"
+                        android:layout_toLeftOf="@id/bc"
+                        android:gravity="center"
+                        android:text="版次:" />
+
+                    <TextView
+                        android:id="@+id/bc"
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@android:color/black" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/black_bord_shape"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@drawable/black_bord_shape">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/black_bord_shape"
+                                android:gravity="center"
+                                android:text="模具编号\nPart drg#" />
+
+                            <TextView
+                                android:id="@+id/tv_mjbh"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/black_bord_shape"
+                                android:gravity="center|right" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/black_bord_shape"
+                                android:gravity="center"
+                                android:text="穴数\nNo. of cav" />
+
+                            <TextView
+                                android:id="@+id/tv_xs"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/black_bord_shape"
+                                android:gravity="center|right" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/black_bord_shape"
+                                android:gravity="center"
+                                android:text="模具尺寸\nTool" />
+
+                            <TextView
+                                android:id="@+id/tv_mjcc"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/black_bord_shape"
+                                android:gravity="center|right" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/black_bord_shape"
+                                android:gravity="center"
+                                android:text="机号\nM/c #" />
+
+                            <TextView
+                                android:id="@+id/tv_jh"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/black_bord_shape"
+                                android:gravity="center|right" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/black_bord_shape"
+                                android:gravity="center"
+                                android:text="机台吨位\nM/c model" />
+
+                            <TextView
+                                android:id="@+id/tv_jtdw"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/black_bord_shape"
+                                android:gravity="center|right" />
+
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/black_bord_shape"
+                                android:gravity="center"
+                                android:text="物料代码\nPart No." />
+
+                            <TextView
+                                android:id="@+id/tv_wldm"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/black_bord_shape"
+                                android:gravity="center|right" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/black_bord_shape"
+                                android:gravity="center"
+                                android:text="产品名称\nPart Name" />
+
+                            <TextView
+                                android:id="@+id/tv_cpmc"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/black_bord_shape"
+                                android:gravity="center|right" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/black_bord_shape"
+                                android:gravity="center"
+                                android:text="塑料名称\Material" />
+
+                            <TextView
+                                android:id="@+id/tv_slmc"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/black_bord_shape"
+                                android:gravity="center|right" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/black_bord_shape"
+                                android:gravity="center"
+                                android:text="塑料颜色\nColor" />
+
+                            <TextView
+                                android:id="@+id/tv_slys"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/black_bord_shape"
+                                android:gravity="center|right" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/black_bord_shape"
+                                android:gravity="center"
+                                android:text="成型动作\nAction" />
+
+                            <TextView
+                                android:id="@+id/tv_cxdz"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/black_bord_shape"
+                                android:gravity="center|right" />
+                        </TableRow>
+                    </TableLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="210dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_marginLeft="5dp"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TableLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="3">
+
+                                    <TextView
+                                        style="@style/GYCS_BaseTextViewStyle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Hot Runner Temp." />
+
+                                    <TextView
+                                        style="@style/GYCS_BaseTextViewStyle"
+                                        android:text="热胶道" />
+
+                                    <TableRow
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:id="@+id/tv_rjd_lab1"
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="1" />
+
+                                        <TextView
+                                            android:id="@+id/tv_rjd_lab2"
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="2" />
+
+                                        <TextView
+                                            android:id="@+id/tv_rjd_lab3"
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="3" />
+
+                                        <TextView
+                                            android:id="@+id/tv_rjd_lab4"
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="4" />
+
+                                        <TextView
+                                            android:id="@+id/tv_rjd_lab5"
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="5" />
+
+                                        <TextView
+                                            android:id="@+id/tv_rjd_lab6"
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="6" />
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:id="@+id/tv_rjd_lab7"
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="7" />
+
+                                        <TextView
+                                            android:id="@+id/tv_rjd_lab8"
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="8" />
+
+                                        <TextView
+                                            android:id="@+id/tv_rjd_lab9"
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="9" />
+
+                                        <TextView
+                                            android:id="@+id/tv_rjd_lab10"
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="10" />
+
+                                        <TextView
+                                            android:id="@+id/tv_rjd_lab11"
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="11" />
+
+                                        <TextView
+                                            android:id="@+id/tv_rjd_lab12"
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="12" />
+                                    </TableRow>
+
+                                </TableLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="bottom"
+                                    android:text="±10℃" />
+
+                                <TableLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="4"
+                                    android:stretchColumns="*">
+
+                                    <TableRow
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="" />
+
+                                        <TextView
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="压力\nPr(Mpa)" />
+
+                                        <TextView
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="速度\nS(mm/s))" />
+
+                                        <TextView
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="位置\nPos(mm)" />
+
+                                        <TextView style="@style/GYCS_BaseTextViewStyle2" />
+
+                                        <TextView style="@style/GYCS_BaseTextViewStyle2" />
+
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="抽芯" />
+
+                                        <TextView
+                                            android:id="@+id/tv_cx_lab1"
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="" />
+
+                                        <TextView
+                                            android:id="@+id/tv_cx_lab2"
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="" />
+
+                                        <TextView
+                                            android:id="@+id/tv_cx_lab3"
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="" />
+
+                                        <TextView
+                                            android:id="@+id/tv_cx_lab4"
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="" />
+
+                                        <TextView
+                                            android:id="@+id/tv_cx_lab5"
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="" />
+
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="进芯" />
+
+                                        <TextView
+                                            android:id="@+id/tv_jx_lab1"
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="" />
+
+                                        <TextView
+                                            android:id="@+id/tv_jx_lab2"
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="" />
+
+                                        <TextView
+                                            android:id="@+id/tv_jx_lab3"
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="" />
+
+                                        <TextView
+                                            android:id="@+id/tv_jx_lab4"
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="" />
+
+                                        <TextView
+                                            android:id="@+id/tv_jx_lab5"
+                                            style="@style/GYCS_BaseTextViewStyle2"
+                                            android:text="" />
+                                    </TableRow>
+                                </TableLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginTop="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1">
+
+                                <com.ruiduoyi.view.MoView
+                                    android:padding="1dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1" />
+
+                                <TableLayout
+                                    android:layout_marginRight="20dp"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:stretchColumns="*">
+
+                                    <TableRow>
+
+                                        <TextView
+                                            android:gravity="center_vertical|right"
+                                            android:layout_width="wrap_content"
+                                            android:layout_span="1"
+                                            android:text="烤料方式:"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/tv_klfs"
+                                            android:textAlignment="center"
+                                            android:layout_span="4"
+                                            android:background="@drawable/black_bord_shape2"
+                                            android:text="烤料方式" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            android:gravity="center_vertical|right"
+                                            android:layout_width="wrap_content"
+                                            android:layout_span="1"
+                                            android:text="温度:"
+                                             />
+
+                                        <TextView
+                                            android:id="@+id/tv_jx_wd"
+                                            android:textAlignment="center"
+                                            android:layout_span="4"
+                                            android:background="@drawable/black_bord_shape2"
+                                            android:text="温度" />
+                                    </TableRow>
+
+                                    <TableRow>
+
+                                        <TextView
+                                            android:gravity="center_vertical|right"
+                                            android:layout_width="wrap_content"
+                                            android:layout_span="1"
+                                            android:text="时间:"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/tv_sj"
+                                            android:textAlignment="center"
+                                            android:layout_span="4"
+                                            android:background="@drawable/black_bord_shape2"
+                                            android:text="时间" />
+                                    </TableRow>
+                                </TableLayout>
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@mipmap/jiqi" />
+
+                                <TableLayout
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_width="300dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginTop="25dp"
+                                    android:stretchColumns="*">
+
+                                    <TableRow android:layout_weight="1">
+
+                                        <TextView
+                                            style="@style/GYCS_BaseTextViewStyle3"
+                                            android:text="HEN/HN:℃" />
+
+                                        <TextView
+                                            style="@style/GYCS_BaseTextViewStyle3"
+                                            android:text="HN1:℃" />
+
+                                        <TextView
+                                            style="@style/GYCS_BaseTextViewStyle3"
+                                            android:text="HN2:℃" />
+
+                                        <TextView
+                                            style="@style/GYCS_BaseTextViewStyle3"
+                                            android:text="HN3:℃" />
+
+                                        <TextView
+                                            style="@style/GYCS_BaseTextViewStyle3"
+                                            android:text="HN4:℃" />
+
+                                    </TableRow>
+
+                                    <TableRow android:layout_weight="1">
+
+                                        <TextView
+                                            android:id="@+id/tv_hen"
+                                            style="@style/GYCS_BaseTextViewStyle4"
+                                            android:text="123" />
+
+                                        <TextView
+                                            android:id="@+id/tv_hn1"
+                                            style="@style/GYCS_BaseTextViewStyle4"
+                                            android:text="13" />
+
+                                        <TextView
+                                            android:id="@+id/tv_hn2"
+                                            style="@style/GYCS_BaseTextViewStyle4"
+                                            android:text="113" />
+
+                                        <TextView
+                                            android:id="@+id/tv_hn3"
+                                            style="@style/GYCS_BaseTextViewStyle4"
+                                            android:text="345" />
+
+                                        <TextView
+                                            android:id="@+id/tv_hn4"
+                                            style="@style/GYCS_BaseTextViewStyle4"
+                                            android:text="87" />
+
+                                    </TableRow>
+                                </TableLayout>
+                                <TextView
+                                    android:layout_marginRight="25dp"
+                                    android:layout_gravity="center_vertical|right"
+                                    android:text="±10℃"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </FrameLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--6个框-->
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle5"/>
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle5"/>
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle5"/>
+                                <TextView
+                                    android:text="压力\nPr(Mpa)"
+                                    style="@style/GYCS_BaseTextViewStyle5"/>
+                                <TextView
+                                    android:text="速度\nS(mm/s)"
+                                    style="@style/GYCS_BaseTextViewStyle5"/>
+                                <TextView
+                                    android:text="位置\nPos(mm)"
+                                    style="@style/GYCS_BaseTextViewStyle5"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="6"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+
+                                <TextView
+                                    android:background="@drawable/black_bord_shape"
+                                    android:layout_height="0dp"
+                                    android:layout_width="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:textAlignment="center"
+                                    android:layout_weight="1"
+                                    android:text="顶出 ejection"
+                                    />
+                                <TableRow
+                                    android:layout_height="0dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_weight="1"
+                                    >
+                                    <TextView
+                                        style="@style/GYCS_BaseTextViewStyle6"
+                                        android:text="顶针前进"
+                                        />
+                                    <TextView
+                                        style="@style/GYCS_BaseTextViewStyle6"
+                                        android:text="顶针后退"
+                                        />
+                                </TableRow>
+                                <TableRow
+                                    android:layout_height="0dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_weight="1"
+                                    >
+                                    <TextView
+                                        style="@style/GYCS_BaseTextViewStyle6"
+                                        android:text="Ejector F."
+                                        />
+                                    <TextView
+                                        style="@style/GYCS_BaseTextViewStyle6"
+                                        android:text="Ejector B."
+                                        />
+                                </TableRow>
+                                <TableRow
+                                    android:layout_height="0dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_weight="1"
+                                    >
+                                    <TextView
+                                        android:id="@+id/tv_ejection_lab1"
+                                        style="@style/GYCS_BaseTextViewStyle6"
+                                        android:text="1453"
+                                        />
+                                    <TextView
+                                        android:id="@+id/tv_ejection_lab2"
+                                        style="@style/GYCS_BaseTextViewStyle6"
+                                        android:text="9527"
+                                        />
+                                    <TextView
+                                        android:id="@+id/tv_ejection_lab3"
+                                        style="@style/GYCS_BaseTextViewStyle6"
+                                        android:text="1453"
+                                        />
+                                    <TextView
+                                        android:id="@+id/tv_ejection_lab4"
+                                        style="@style/GYCS_BaseTextViewStyle6"
+                                        android:text="9527"
+                                        />
+                                    <TextView
+                                        android:id="@+id/tv_ejection_lab5"
+                                        style="@style/GYCS_BaseTextViewStyle6"
+                                        android:text="1453"
+                                        />
+                                    <TextView
+                                        android:id="@+id/tv_ejection_lab6"
+                                        style="@style/GYCS_BaseTextViewStyle6"
+                                        android:text="9527"
+                                        />
+                                </TableRow>
+                                <TableRow
+                                    android:layout_height="0dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_weight="1"
+                                    >
+                                    <TextView
+                                        android:id="@+id/tv_ejection_lab7"
+                                        style="@style/GYCS_BaseTextViewStyle6"
+                                        android:text="1453"
+                                        />
+                                    <TextView
+                                        android:id="@+id/tv_ejection_lab8"
+                                        style="@style/GYCS_BaseTextViewStyle6"
+                                        android:text="9527"
+                                        />
+                                    <TextView
+                                        android:id="@+id/tv_ejection_lab9"
+                                        style="@style/GYCS_BaseTextViewStyle6"
+                                        android:text="1453"
+                                        />
+                                    <TextView
+                                        android:id="@+id/tv_ejection_lab10"
+                                        style="@style/GYCS_BaseTextViewStyle6"
+                                        android:text="9527"
+                                        />
+                                    <TextView
+                                        android:id="@+id/tv_ejection_lab11"
+                                        style="@style/GYCS_BaseTextViewStyle6"
+                                        android:text="1453"
+                                        />
+                                    <TextView
+                                        android:id="@+id/tv_ejection_lab12"
+                                        style="@style/GYCS_BaseTextViewStyle6"
+                                        android:text="9527"
+                                        />
+                                </TableRow>
+                                <TableRow
+                                    android:layout_height="0dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_weight="1"
+                                    >
+                                    <TextView
+                                        android:id="@+id/tv_ejection_lab13"
+                                        style="@style/GYCS_BaseTextViewStyle6"
+                                        android:text="1453"
+                                        />
+                                    <TextView
+                                        android:id="@+id/tv_ejection_lab14"
+                                        style="@style/GYCS_BaseTextViewStyle6"
+                                        android:text="9527"
+                                        />
+                                    <TextView
+                                        android:id="@+id/tv_ejection_lab15"
+                                        style="@style/GYCS_BaseTextViewStyle6"
+                                        android:text="1453"
+                                        />
+                                    <TextView
+                                        android:id="@+id/tv_ejection_lab16"
+                                        style="@style/GYCS_BaseTextViewStyle6"
+                                        android:text="9527"
+                                        />
+                                    <TextView
+                                        android:id="@+id/tv_ejection_lab17"
+                                        style="@style/GYCS_BaseTextViewStyle6"
+                                        android:text="1453"
+                                        />
+                                    <TextView
+                                        android:id="@+id/tv_ejection_lab18"
+                                        style="@style/GYCS_BaseTextViewStyle6"
+                                        android:text="9527"
+                                        />
+                                </TableRow>
+
+
+
+                            <!--<android.support.v7.widget.GridLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:columnCount="6"
+                                app:rowCount="6"
+                                app:orientation="horizontal"
+                                >
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle7"
+                                    android:text="顶出"
+                                    app:layout_columnSpan="6" />
+
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle7"
+                                    android:text="1453"
+                                    app:layout_columnSpan="3" />
+
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle7"
+                                    android:text="9527"
+                                    app:layout_columnSpan="3" />
+
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle7"
+                                    android:text="1453"
+                                    app:layout_columnSpan="3" />
+
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle7"
+                                    android:text="9527"
+                                    app:layout_columnSpan="3" />
+
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle7"
+                                    android:text="1" />
+
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle7"
+                                    android:text="2" />
+
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle7"
+                                    android:text="3" />
+
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle7"
+                                    android:text="4" />
+
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle7"
+                                    android:text="5" />
+
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle7"
+                                    android:text="6" />
+
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle7"
+                                    android:text="7" />
+
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle7"
+                                    android:text="8" />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle7"
+                                    android:text="9" />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle7"
+                                    android:text="10" />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle7"
+                                    android:text="11" />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle7"
+                                    android:text="12" />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle7"
+                                    android:text="13" />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle7"
+                                    android:text="14" />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle7"
+                                    android:text="15" />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle7"
+                                    android:text="16" />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle7"
+                                    android:text="17" />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle7"
+                                    android:text="18" />
+                            </android.support.v7.widget.GridLayout>-->
+
+
+                        </LinearLayout>
+                        <!--<LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                            <TextView
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                android:text="压力\nPr(Mpa)"
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                android:text="速度\nS(mm/s)"
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                android:text="位置\nPos(mm))"
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                        </LinearLayout>-->
+                        <LinearLayout
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical"
+                            android:layout_weight="5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:background="@drawable/black_bord_shape"
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:gravity="center_vertical"
+                                android:textAlignment="center"
+                                android:layout_weight="1"
+                                android:text="合模 closing"
+                                />
+
+                            <TableRow
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="2"
+                                >
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="3"
+                                    />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="2"
+                                    />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1"
+                                    />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="低压\nLP"
+                                    />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="高压\nHP"
+                                    />
+                            </TableRow>
+                            <TableRow
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <TextView
+                                    android:id="@+id/tv_closing_lab1"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_closing_lab2"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_closing_lab3"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_closing_lab4"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_closing_lab5"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                            </TableRow>
+                            <TableRow
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <TextView
+                                    android:id="@+id/tv_closing_lab6"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_closing_lab7"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_closing_lab8"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_closing_lab9"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_closing_lab10"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                            </TableRow>
+                            <TableRow
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <TextView
+                                    android:id="@+id/tv_closing_lab11"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_closing_lab12"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_closing_lab13"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_closing_lab14"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_closing_lab15"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                            </TableRow>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical"
+                            android:layout_weight="5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:background="@drawable/black_bord_shape"
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:gravity="center_vertical"
+                                android:textAlignment="center"
+                                android:layout_weight="1"
+                                android:text="开模"
+                                />
+                            <TextView
+                                android:background="@drawable/black_bord_shape"
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:gravity="center_vertical"
+                                android:textAlignment="center"
+                                android:layout_weight="1"
+                                android:text="opening"
+                                />
+
+                            <TableRow
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="5"
+                                    />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="4"
+                                    />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="3"
+                                    />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="2"
+                                    />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1"
+                                    />
+                            </TableRow>
+                            <TableRow
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <TextView
+                                    android:id="@+id/tv_opening_lab1"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_opening_lab2"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_opening_lab3"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_opening_lab4"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_opening_lab5"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                            </TableRow>
+                            <TableRow
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <TextView
+                                    android:id="@+id/tv_opening_lab6"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_opening_lab7"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_opening_lab8"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_opening_lab9"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_opening_lab10"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                            </TableRow>
+                            <TableRow
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <TextView
+                                    android:id="@+id/tv_opening_lab11"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_opening_lab12"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_opening_lab13"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_opening_lab14"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_opening_lab15"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                            </TableRow>
+                        </LinearLayout>
+                        <!--<LinearLayout
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+
+                        </LinearLayout>-->
+                    </LinearLayout>
+                    <!--网格2开始-->
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                            <TextView
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                android:text="压力\nPr(Mpa)"
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                android:text="速度\nS(mm/s)"
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                android:text="时间\nT(s)"
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:background="@drawable/black_bord_shape"
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:gravity="center_vertical"
+                                android:textAlignment="center"
+                                android:layout_weight="1"
+                                android:text="保压"
+                                />
+                            <TextView
+                                android:background="@drawable/black_bord_shape"
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:gravity="center_vertical"
+                                android:textAlignment="center"
+                                android:layout_weight="1"
+                                android:text="holding"
+                                />
+
+                            <TableRow
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="4"
+                                    />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="3"
+                                    />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="2"
+                                    />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1"
+                                    />
+                            </TableRow>
+                            <TableRow
+                                android:background="@color/green"
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <TextView
+                                    android:id="@+id/tv_holding_lab1"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_holding_lab2"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_holding_lab3"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_holding_lab4"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                            </TableRow>
+                            <TableRow
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <TextView
+                                    android:id="@+id/tv_holding_lab5"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_holding_lab6"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_holding_lab7"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_holding_lab8"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                            </TableRow>
+                            <TableRow
+                                android:background="@color/green"
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <TextView
+                                    android:id="@+id/tv_holding_lab9"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_holding_lab10"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_holding_lab11"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_holding_lab12"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                            </TableRow>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                            <TextView
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                android:text="±10Mpa"
+                                style="@style/GYCS_BaseTextViewStyle5"
+                                android:gravity="center_vertical|left"
+                                />
+                            <TextView
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                            <TextView
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                android:text="压力\nPr(Mpa)"
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                android:text="速度\nS(mm/s)"
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                android:text="位置\nPos(mm)"
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:background="@drawable/black_bord_shape"
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:gravity="center_vertical"
+                                android:textAlignment="center"
+                                android:layout_weight="1"
+                                android:text="注射"
+                                />
+                            <TextView
+                                android:background="@drawable/black_bord_shape"
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:gravity="center_vertical"
+                                android:textAlignment="center"
+                                android:layout_weight="1"
+                                android:text="filling"
+                                />
+                            <TableRow
+
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="5"
+                                    />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="4"
+                                    />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="3"
+                                    />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="2"
+                                    />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1"
+                                    />
+                            </TableRow>
+                            <TableRow
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <TextView
+                                    android:id="@+id/tv_filling_lab1"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="5"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_filling_lab2"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="4"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_filling_lab3"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="3"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_filling_lab4"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="2"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_filling_lab5"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1"
+                                    />
+                            </TableRow>
+                            <TableRow
+                                android:background="@color/green"
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <TextView
+                                    android:id="@+id/tv_filling_lab6"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_filling_lab7"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_filling_lab8"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_filling_lab9"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_filling_lab10"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                            </TableRow>
+                            <TableRow
+                                android:background="@color/green"
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <TextView
+                                    android:id="@+id/tv_filling_lab11"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_filling_lab12"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_filling_lab13"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_filling_lab14"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_filling_lab15"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                            </TableRow>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                            <TextView
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                android:text="±20mm/s"
+
+                                style="@style/GYCS_BaseTextViewStyle5"
+                                android:gravity="center_vertical|left"/>
+                            <TextView
+                                android:text="±20mm"
+                                style="@style/GYCS_BaseTextViewStyle5"
+                                android:gravity="center_vertical|left"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                            <TextView
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                android:text="压力\nPr(Mpa)"
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                android:text="背压\nBP(Mpa)"
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                android:text="转速\n(rpm)"
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+                            <TextView
+                                android:text="位置\nPos(mm)"
+                                style="@style/GYCS_BaseTextViewStyle5"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:background="@drawable/black_bord_shape"
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:gravity="center_vertical"
+                                android:textAlignment="center"
+                                android:layout_weight="1"
+                                android:text="塑化"
+                                />
+                            <TableRow
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="Dos2"
+                                    />
+                                <TextView
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="Dos1"
+                                    />
+
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <TextView
+                                    android:id="@+id/tv_sh_lab1"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="5"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_sh_lab2"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="4"
+                                    />
+
+                            </TableRow>
+                            <TableRow
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <TextView
+                                    android:id="@+id/tv_sh_lab3"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_sh_lab4"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+
+                            </TableRow>
+                            <TableRow
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <TextView
+                                    android:id="@+id/tv_sh_lab5"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_sh_lab6"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+
+                            </TableRow>
+                            <TableRow
+                                android:background="@color/green"
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_weight="1"
+                                >
+                                <TextView
+                                    android:id="@+id/tv_sh_lab7"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="1453"
+                                    />
+                                <TextView
+                                    android:id="@+id/tv_sh_lab8"
+                                    style="@style/GYCS_BaseTextViewStyle6"
+                                    android:text="9527"
+                                    />
+                            </TableRow>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:background="@drawable/black_bord_shape"
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:gravity="center_vertical"
+                                android:textAlignment="center"
+                                android:layout_weight="1"
+                                android:text="倒塑"
+                                />
+                            <TextView
+                                android:background="@drawable/black_bord_shape"
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:gravity="center_vertical"
+                                android:textAlignment="center"
+                                android:layout_weight="1"
+                                android:text="Dec"
+                                />
+                            <TextView
+                                android:id="@+id/tv_ds_lab1"
+                                android:background="@drawable/black_bord_shape"
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:gravity="center_vertical"
+                                android:textAlignment="center"
+                                android:layout_weight="1"
+                                android:text="12"
+                                />
+                            <TextView
+                                android:id="@+id/tv_ds_lab2"
+                                android:background="@drawable/black_bord_shape"
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:gravity="center_vertical"
+                                android:textAlignment="center"
+                                android:layout_weight="1"
+                                android:text="31"
+                                />
+                            <TextView
+                                android:id="@+id/tv_ds_lab3"
+                                android:background="@drawable/black_bord_shape"
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:gravity="center_vertical"
+                                android:textAlignment="center"
+                                android:layout_weight="1"
+                                android:text="144"
+                                />
+                            <TextView
+                                android:id="@+id/tv_ds_lab4"
+                                android:background="@drawable/black_bord_shape2"
+                                android:layout_height="0dp"
+                                android:layout_width="match_parent"
+                                android:gravity="center_vertical"
+                                android:textAlignment="center"
+                                android:layout_weight="1"
+                                android:text="12"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--底部开始-->
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp">
+                        <TableLayout
+                            android:stretchColumns="*"
+                            android:layout_weight="3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                            <TableRow
+                                android:layout_weight="1"
+                                android:layout_height="0dp"
+                                >
+                                <TextView
+                                    android:layout_height="match_parent"
+                                    android:layout_width="1dp"
+                                    android:layout_span="1"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center"
+                                    android:text="填充时间\nFill Time" />
+
+                                <TextView
+                                    android:id="@+id/tv_tcsj"
+                                    android:layout_height="match_parent"
+                                    android:layout_span="1"
+                                    android:background="@drawable/black_bord_shape2"
+                                    android:gravity="center|right" />
+                                <TextView
+                                    android:layout_height="match_parent"
+                                    android:layout_span="2"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center"
+                                    android:text="最大注塑压力\ninj.Pressure(Mpa)" />
+
+                                <TextView
+                                    android:id="@+id/tv_zdzsyl"
+                                    android:layout_height="match_parent"
+                                    android:layout_span="1"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/black_bord_shape2"
+                                    android:gravity="center|right" />
+                                <TextView
+                                    android:layout_height="match_parent"
+                                    android:layout_span="2"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center"
+                                    android:text="最小缓冲\nMin.cushion" />
+
+                                <TextView
+                                    android:id="@+id/tv_zxhc"
+                                    android:layout_height="match_parent"
+                                    android:layout_span="1"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center|right" />
+                                <TextView
+                                    android:layout_height="match_parent"
+                                    android:layout_span="1"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center|right" />
+                            </TableRow>
+                            <TableRow
+                                android:layout_weight="1"
+                                android:layout_height="0dp"
+                                >
+                                <TextView
+                                    android:layout_height="match_parent"
+                                    android:layout_width="1dp"
+                                    android:layout_span="1"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center"
+                                    android:text="保压时间\nPacking Time" />
+
+                                <TextView
+                                    android:id="@+id/tv_bysj"
+                                    android:layout_height="match_parent"
+                                    android:layout_span="1"
+                                    android:background="@drawable/black_bord_shape2"
+                                    android:gravity="center|right" />
+                                <TextView
+                                    android:layout_height="match_parent"
+                                    android:layout_span="2"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center"
+                                    android:text="最大保压压力\Pack.Pressure(Mpa)" />
+
+                                <TextView
+                                    android:id="@+id/tv_zdbyyl"
+                                    android:layout_height="match_parent"
+                                    android:layout_span="1"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/black_bord_shape2"
+                                    android:gravity="center|right" />
+                                <TextView
+                                    android:layout_height="match_parent"
+                                    android:layout_span="2"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center"
+                                    android:text="V/P位置切换\nV/P switch over" />
+
+                                <TextView
+                                    android:id="@+id/tv_wzqh"
+                                    android:layout_height="match_parent"
+                                    android:layout_span="1"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center|right" />
+                                <TextView
+                                    android:layout_height="match_parent"
+                                    android:layout_span="1"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center|right" />
+                            </TableRow>
+                            <TableRow
+
+                                android:layout_weight="1"
+                                android:layout_height="0dp"
+                                >
+                                <TextView
+                                    android:layout_height="match_parent"
+                                    android:layout_width="1dp"
+                                    android:layout_span="1"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center"
+                                    android:text="冷却时间\nCooling Time" />
+
+                                <TextView
+                                    android:id="@+id/tv_lqsj"
+                                    android:layout_height="match_parent"
+                                    android:layout_span="1"
+                                    android:background="@drawable/black_bord_shape2"
+                                    android:gravity="center|right" />
+                                <TextView
+
+                                    android:layout_height="match_parent"
+                                    android:layout_span="2"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center"
+                                    android:text="锁模压力\nclamping fore(KN" />
+
+                                <TextView
+                                    android:id="@+id/tv_smyl"
+                                    android:layout_height="match_parent"
+                                    android:layout_span="1"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center|right" />
+                                <TextView
+                                    android:layout_height="match_parent"
+                                    android:layout_span="2"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center"
+                                    android:text="顶出次数\nno.of ejection" />
+
+                                <TextView
+                                    android:id="@+id/tv_dccs"
+                                    android:layout_height="match_parent"
+                                    android:layout_span="1"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center|right" />
+                                <TextView
+                                    android:layout_height="match_parent"
+                                    android:layout_span="1"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center|right" />
+                            </TableRow>
+                            <TableRow
+                                android:layout_weight="1"
+                                android:layout_height="0dp"
+                                >
+                                <TextView
+                                    android:layout_height="match_parent"
+                                    android:layout_width="1dp"
+                                    android:layout_span="1"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center"
+                                    android:text="开合模+机械手时间\nFill Time" />
+
+                                <TextView
+                                    android:id="@+id/tv_khmsj"
+                                    android:layout_height="match_parent"
+                                    android:layout_span="1"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center|right" />
+                                <TextView
+                                    android:layout_height="match_parent"
+                                    android:layout_span="2"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center"
+                                    android:text="背压\nBP(Mpa)" />
+
+                                <TextView
+                                    android:id="@+id/tv_by"
+                                    android:layout_height="match_parent"
+                                    android:layout_span="1"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center|right" />
+                                <TextView
+                                    android:layout_height="match_parent"
+                                    android:layout_span="2"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center"
+                                    android:text="标准产品重量\n(g)" />
+
+                                <TextView
+                                    android:id="@+id/tv_bzcpzl"
+                                    android:layout_height="match_parent"
+                                    android:layout_span="1"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center|right" />
+                                <TextView
+                                    android:layout_height="match_parent"
+                                    android:layout_span="1"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center|right" />
+                            </TableRow>
+                            <TableRow
+                                android:layout_weight="1"
+                                android:layout_height="0dp"
+                                >
+                                <TextView
+                                    android:layout_height="match_parent"
+                                    android:layout_width="1dp"
+                                    android:layout_span="1"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center"
+                                    android:text="周期时间\nCycle Time" />
+
+                                <TextView
+                                    android:id="@+id/tv_zqsj"
+                                    android:layout_height="match_parent"
+                                    android:layout_span="1"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center|right" />
+                                <TextView
+                                    android:layout_height="match_parent"
+                                    android:layout_span="2"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center"
+                                    android:text="水口重量\n(g)" />
+
+                                <TextView
+                                    android:id="@+id/tv_skzl"
+                                    android:layout_height="match_parent"
+                                    android:layout_span="1"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center|right" />
+                                <TextView
+                                    android:layout_height="match_parent"
+                                    android:layout_span="2"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center"
+                                    android:text="标准毛重\n(g)" />
+
+                                <TextView
+                                    android:id="@+id/tv_bzmz"
+                                    android:layout_height="match_parent"
+                                    android:layout_span="1"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center|right" />
+                                <TextView
+                                    android:layout_height="match_parent"
+                                    android:layout_span="1"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:gravity="center|right" />
+                            </TableRow>
+                        </TableLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_weight="2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:gravity="center_vertical"
+                                    android:text="注塑问题"
+                                    android:textAlignment="center"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="38dp" />
+                                <TextView
+                                    android:id="@+id/tv_zswt"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:text="模具注意事项"
+                                    android:gravity="center_vertical"
+                                    android:textAlignment="center"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="38dp" />
+                                <TextView
+                                    android:id="@+id/tv_mjzysx"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/black_bord_shape"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <TextView
+                        android:id="@+id/constraint_id_lab1"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="提示:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:layout_toRightOf="@id/constraint_id_lab1"
+                        android:id="@+id/constraint_id_lab2"
+                        android:background="@color/green"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:layout_toRightOf="@id/constraint_id_lab2"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:text="都是重要参数"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/tv_zbr"
+                        android:layout_marginRight="50dp"
+                        android:layout_toLeftOf="@id/tv_qhr"
+                        android:text="制表人：系统专用 2018-10-17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/tv_qhr"
+                        android:layout_alignParentRight="true"
+                        android:text="签核人：瑞多益 2018-10-17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>
