@@ -228,7 +228,9 @@ public class GpioService extends Service {
                                 break;
                             }
                         }else {
-                            sendBroadcast(new Intent("com.ruiduoyi.GpioUploadError"));
+                            if (list.size() >5){
+                                sendBroadcast(new Intent("com.ruiduoyi.GpioUploadError"));
+                            }
                             AppUtils.uploadNetworkError("exec PAD_SrvDataUp NetWorkError",jtbh,mac);
                             break;
                         }

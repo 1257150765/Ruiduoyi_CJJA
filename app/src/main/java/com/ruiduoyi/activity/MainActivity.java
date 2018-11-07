@@ -471,7 +471,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                     if (dialog !=null && dialog.isShow()){
                         dialog.dismiss();
                     }
-                    dialog.setMessage("信号上传异常，将会导致扣数失败。请检查网络！");
+                    dialog.setMessage("网络异常，请检查网络！");
                     dialog.show();
                     return;
                 }
